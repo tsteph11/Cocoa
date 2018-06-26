@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+So let's see, this projecct is just a means for me to showcase my programming prowess.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It likely won't be anything too fancy but will consisit of several webpages, showing front-end and back-end design and hopefully someone
+else will think it's cool besides just me.
