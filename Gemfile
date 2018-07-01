@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap'
 
 gem 'jquery-rails'
+#postgres gem
+gem 'pg'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

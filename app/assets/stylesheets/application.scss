@@ -2,11 +2,22 @@
 
 
 .bg-custom-beige{
-  background-color: #38301b;
+  background-color: #fffefc;
   height: auto;
   min-height: 50px;
   max-height: 60px;
-  box-shadow: 10px 10px;
+  box-shadow: 3px 3px;
   border-radius: 0px 0px 0px 5px;
   color: #2E2F30;
+}
+
+.hams {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.card-index{
+  margin-top: 25px;
 }
