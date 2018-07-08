@@ -47,7 +47,7 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    autoprefixer-rails (8.6.4)
+    autoprefixer-rails (8.6.5)
       execjs
     better_errors (2.4.0)
       coderay (>= 1.0.0)
@@ -128,9 +128,8 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.4-x64-mingw32)
     multi_json (1.13.1)
-    mysql2 (0.5.1-x64-mingw32)
     nio4r (2.3.1)
-    nokogiri (1.8.3-x64-mingw32)
+    nokogiri (1.8.4-x64-mingw32)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0-x64-mingw32)
     popper_js (1.12.9)
@@ -199,7 +198,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2018.5)
       tzinfo (>= 1.0.0)
-    uglifier (4.1.13)
+    uglifier (4.1.14)
       execjs (>= 0.3.0, < 3)
     web-console (3.6.2)
       actionview (>= 5.0)
@@ -227,7 +226,6 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
-  mysql2 (>= 0.4.4, < 0.6.0)
   pg
   puma (~> 3.11)
   rails (~> 5.2.0)
