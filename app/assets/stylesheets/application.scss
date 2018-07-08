@@ -1,12 +1,77 @@
 @import "bootstrap";
 
+.active-page{
+  background-color: yellowgreen;
+  //does not work in older browsers but then again, who really cares?
+  pointer-events: none;
+}
 
 .bg-custom-beige{
-  background-color: #38301b;
+  background-color: #fffefc;
   height: auto;
   min-height: 50px;
   max-height: 60px;
-  box-shadow: 10px 10px;
+  box-shadow: 3px 3px;
   border-radius: 0px 0px 0px 5px;
   color: #2E2F30;
 }
+
+.hams {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  cursor: pointer;
+  border: none;
+}
+
+.hams-space {
+  width: 35px;
+  height: 5px;
+  background-color: #fffefc;
+  cursor: pointer;
+  border: none;
+}
+
+.card-index{
+  margin-top: 25px;
+  width: 18rem;
+}
+
+ul#menu li{
+  display: inline-block;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

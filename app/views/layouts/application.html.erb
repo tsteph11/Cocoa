@@ -9,7 +9,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="navbar navbar-expand-sm bg-custom-beige" onclick="dropFunction()">
+    <ul class="navbar-nav" >
+      <li class="nav-item">
+        <div  >
+        <div class="hams" href="#"></div>
+        <div class="hams-space" href="#"></div>
+        <div class="hams" href="#"></div>
+        <div class="hams-space" href="#"></div>
+        <div class="hams" href="#"></div>
+        </div>
+        <div id="myDropdown" class="dropdown-content">
+          <%= link_to "Projects", '/projects', class: @is_project %>
+          <%= link_to "Interests", '/', class: @is_interest   %>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+      </li>
+    </ul>
+  </nav>
+  </div>
+  <div class = "col-sm"></div>
+  <div class = "col-sm"></div>
+
   <body>
     <%= yield %>
   </body>
 </html>
+

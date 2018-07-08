@@ -1,17 +1,17 @@
-<!-- Grey with black text -->
-<nav class="navbar navbar-expand-sm bg-custom-beige ">
-  <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
-    </li>
-  </ul>
-</nav>
+<div class="container">
+<ul id="menu">
+  <% @interests.each do |interest| %>
+<li>
+  <div class="col-sm card card-index">
+    <%= image_tag "#{interest.image_name}.jpg", size:"256x256",  class: "card-img-top"%>
+    <div class="card-body">
+      <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
+      <p class="card-text"><%= interest.read_attribute(:description) %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</li>
+  <% end %>
+</ul>
+  <%= paginate @interests %>
+</div>
