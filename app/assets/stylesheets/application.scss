@@ -75,3 +75,20 @@ ul#menu li{
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/* paragraph body for interest show page */
+.interest-body {
+  padding: 10px 50px 10px 50px;
+}
+
+/* style for interest show page */
+.interest-title {
+  padding: 50px 50px 10px 50px;
+}
+
+/*show max size*/
+.show-image{
+  padding: 10px 50px 10px 50px;
+  max-width: 700px;
+  max-height: 920px;
+}

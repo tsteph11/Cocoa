@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h5 class="interest-title"><%= @interest.read_attribute(:name) %></h5>
+      <p class="interest-body"><%= @interest.read_attribute(:long_description) %></p>
+    </div>
+    <div class="col">
+      <%= image_tag "#{@interest.image_name}.jpg", class: 'show-image'%>
+    </div>
+  </div>
+</div>

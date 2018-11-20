@@ -60,7 +60,7 @@ end
 
 group :production do
   #sqreen
-  gem 'sqreen'
+  #gem 'sqreen'
 end
 
 group :test do

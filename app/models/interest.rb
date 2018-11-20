@@ -1,3 +1,3 @@
 class Interest < ApplicationRecord
-  #attr_accessor :name, :description, :image_id
+  validates :image_name, presence: true
 end
