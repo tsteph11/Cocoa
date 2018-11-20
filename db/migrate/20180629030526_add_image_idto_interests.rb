@@ -3,3 +3,4 @@ class AddImageIdtoInterests < ActiveRecord::Migration[5.2]
     add_column :interests, :image_id, :integer
   end
 end
+

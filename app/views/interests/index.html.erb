@@ -7,7 +7,7 @@
     <div class="card-body">
       <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
       <p class="card-text"><%= interest.read_attribute(:description) %></p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <%= link_to "Learn more", interest_path(interest), class: "btn btn-primary" %>
     </div>
   </div>
 </li>

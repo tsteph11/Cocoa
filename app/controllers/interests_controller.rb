@@ -3,4 +3,8 @@ class InterestsController < ApplicationController
     #get all interests, with no particular order and the page from the params is the page that we are paginating on.
     @interests = Interest.all.page params[:page]
   end
+
+  def show
+    @interest = Interest.find(params[:id])
+  end
 end
