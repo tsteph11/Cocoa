@@ -1,25 +1,25 @@
 @import "bootstrap";
 
 .active-page{
-  background-color: yellowgreen;
+  background-color: #cce6ff;
   //does not work in older browsers but then again, who really cares?
   pointer-events: none;
 }
 
 .bg-custom-beige{
-  background-color: #fffefc;
+  background-color: #cce6ff;
   height: auto;
   min-height: 50px;
   max-height: 60px;
   box-shadow: 3px 3px;
   border-radius: 0px 0px 0px 5px;
-  color: #2E2F30;
+  color: #007bff;
 }
 
 .hams {
   width: 35px;
   height: 5px;
-  background-color: black;
+  background-color: #007bff;
   cursor: pointer;
   border: none;
 }
@@ -27,7 +27,7 @@
 .hams-space {
   width: 35px;
   height: 5px;
-  background-color: #fffefc;
+  background-color: #cce6ff;
   cursor: pointer;
   border: none;
 }
