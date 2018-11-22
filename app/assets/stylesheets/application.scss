@@ -11,8 +11,8 @@ p{
 
 /*grey and lavendar shift*/
 @keyframes blue-shift {
-  0%, 100% {background-color: lavenderblush;}
-  50% {background-color: lavender;}
+  0%, 100% {background-color: white;}
+  50% {background-color: black;}
 }
 
 .bg-custom{
@@ -20,8 +20,8 @@ p{
 }
 
 body{
-  color: black;
-  background-image: url('bg.jpg');
+  color: white;
+  background-image: image-url('bg.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
