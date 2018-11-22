@@ -7,7 +7,7 @@ function dropFunction() {
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-    if (!event.target.matches('.hams, .hams-space')) {
+    if (!event.target.matches('.hams')) {
 
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -20,7 +20,7 @@ window.onclick = function(event) {
     }
 }
 
-$(".active-page").click( function(event) {
+/*$(".active-page").click( function(event) {
     event.preventDefault();
-})
+})*/
 

@@ -1,17 +1,3 @@
 <div class="container">
-  <ul id="menu">
-    <% @projects.each do |project| %>
-      <li>
-        <div class="col-sm card card-index">
-          <%= image_tag "#{project.image_name}.jpg", size:"256x256",  class: "card-img-top"%>
-          <div class="card-body">
-            <h5 class="card-title"><%= project.read_attribute(:name) %></h5>
-            <p class="card-text"><%= project.read_attribute(:description) %></p>
-            <%= link_to "Learn more", :project_path, class: "btn btn-primary" %>
-          </div>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-  <%= paginate @projects %>
+  <h1>UNDER CONSTRUCTION!</h1>
 </div>

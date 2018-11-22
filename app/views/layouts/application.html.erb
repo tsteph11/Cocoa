@@ -9,20 +9,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <nav class="navbar navbar-expand-sm bg-custom-beige" onclick="dropFunction()">
+  <nav class="navbar bg-custom" onclick="dropFunction()">
     <ul class="navbar-nav" >
-      <li class="nav-item">
-        <div  >
-        <div class="hams" href="#"></div>
-        <div class="hams-space" href="#"></div>
-        <div class="hams" href="#"></div>
-        <div class="hams-space" href="#"></div>
-        <div class="hams" href="#"></div>
+      <li>
+        <div>
+        <a class="hams" href="#"></a>
+        <a class="hams" href="#"></a>
+        <a class="hams" href="#"></a>
         </div>
         <div id="myDropdown" class="dropdown-content">
-          <%= link_to "Projects", '#', class: @is_project %>
-          <%= link_to "Interests", '/', class: @is_interest   %>
-          <a href="#">Link 3</a>
+          <%= link_to "Projects", projects_path, class: [@is_project, 'aselect'] %>
+          <%= link_to "Interests", interests_path, class: [@is_interest, 'aselect']  %>
         </div>
       </li>
     </ul>
