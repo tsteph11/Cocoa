@@ -1,6 +1,17 @@
 @import "bootstrap";
 
+h1{
+  text-shadow: 2px 2px #000000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h5{
+  text-shadow: 2px 2px #000000;
+  font-family: "Times New Roman", Times, serif;
+}
+
 p{
+  text-shadow: 2px 2px #000000;
   font-family: "Times New Roman", Times, serif;
 }
 .active-page{
@@ -20,7 +31,6 @@ p{
 }
 
 body{
-  text-shadow: 2px 2px #000000;
   color: white;
   background-image: image-url('bg.jpg');
   background-repeat: no-repeat;
