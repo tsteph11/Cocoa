@@ -5,7 +5,7 @@
       <p class="interest-body"><%= @interest.read_attribute(:long_description) %></p>
     </div>
     <div class="col">
-      <%= image_tag "#{@interest.image_name}.jpg", class: 'show-image'%>
+      <%= image_tag "#{@interest.image_name}.jpg", size:"512x512", class: 'show-image'%>
     </div>
   </div>
 </div>
