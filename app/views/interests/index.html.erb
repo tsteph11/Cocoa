@@ -8,7 +8,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
             <p class="card-text"><%= interest.read_attribute(:description) %></p>
-            <%= link_to "Learn more", interest_path(interest), class: "btn btn-primary" %>
+            <%= link_to "Learn more", interest_path(interest), class: "btn btn-info" %>
           </div>
         </div>
       </li>
@@ -16,3 +16,10 @@
   </ul>
     <%= paginate @interests %>
 </div>
+
+<footer>
+  <%= image_tag "headshot.jpg", size: "150x200", class:"headshot"%>
+  <div class="center">
+    <%= mail_to 'tstephens010@gmail.com', nil %>
+  </div>
+</footer>

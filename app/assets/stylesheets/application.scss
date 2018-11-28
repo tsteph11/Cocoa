@@ -1,17 +1,14 @@
 @import "bootstrap";
 
 h1{
-  text-shadow: 2px 2px #000000;
   font-family: "Times New Roman", Times, serif;
 }
 
 h5{
-  text-shadow: 2px 2px #000000;
   font-family: "Times New Roman", Times, serif;
 }
 
 p{
-  text-shadow: 2px 2px #000000;
   font-family: "Times New Roman", Times, serif;
 }
 .active-page{
@@ -26,15 +23,23 @@ p{
   50% {background-color: black;}
 }
 
+.center{
+    text-align: center;
+}
+
 .bg-custom{
   height: auto;
 }
 
+.headshot{
+  display: block;
+  margin: 0 auto;
+}
+
 body{
-  color: white;
+  color: black;
   background-image: image-url('bg.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
 }
 
