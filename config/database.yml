@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
-  password: <%= ENV.DB_PASSWORD %>
+  password: <%= ENV['COCOA_DATABASE_PASSWORD'] %>
   port: 5432
   host: localhost
 
