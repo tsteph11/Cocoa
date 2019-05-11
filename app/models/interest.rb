@@ -1,5 +1,3 @@
 class Interest < ApplicationRecord
-  validates :image_name, presence: true
-  validates :description, presence: true
-  validates :name, presence: true
+  validates_presence_of :image_name, :name, :description, :long_description
 end
