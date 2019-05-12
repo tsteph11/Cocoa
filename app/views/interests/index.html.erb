@@ -1,11 +1,12 @@
 
 <div class="container">
   <ul id="menu">
+  <div class="card-group">
     <% @interests.each do |interest| %>
       <li>
-        <div class="col-sm card card-index">
+        <div class="col-sm card card-index bg-light mb-3">
           <%= image_tag "#{interest.image_name}.jpg", size:"256x256",  class: "card-img-top"%>
-          <div class="card-body">
+          <div class="card-body text-info">
             <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
             <p class="card-text"><%= interest.read_attribute(:description) %></p>
             <%= link_to "Learn more", interest_path(interest), class: "btn btn-info" %>
@@ -13,6 +14,7 @@
         </div>
       </li>
     <% end %>
+  </div>
   </ul>
     <%= paginate @interests %>
 </div>

@@ -1,9 +1,8 @@
 <div class="container">
-  <div class="row">
-    <div class="col ">
+  <div class="row bg-light mb-3">
+    <div class="col text-info">
       <h5 class="interest-title"><%= @interest.read_attribute(:name) %></h5>
       <p class="interest-body"><%= @interest.read_attribute(:long_description) %></p>
-      <%= link_to 'Back', :back, class: 'btn btn-info' %>
     </div>
     <div class="col">
       <%= image_tag "#{@interest.image_name}.jpg", size:"512x512", class: 'show-image'%>
