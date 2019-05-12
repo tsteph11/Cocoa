@@ -5,7 +5,7 @@
       <li>
         <div class="col-sm card card-index">
           <%= image_tag "#{interest.image_name}.jpg", size:"256x256",  class: "card-img-top"%>
-          <div class="card-body bord">
+          <div class="card-body">
             <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
             <p class="card-text"><%= interest.read_attribute(:description) %></p>
             <%= link_to "Learn more", interest_path(interest), class: "btn btn-info" %>
