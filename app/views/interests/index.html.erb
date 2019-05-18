@@ -1,21 +1,34 @@
 
+
+
+
 <div class="container">
-  <ul id="menu">
-  <div class="card-group">
-    <% @interests.each do |interest| %>
-      <li>
-        <div class="col-sm card card-index bg-light mb-3">
-          <%= image_tag "#{interest.image_name}.jpg", size:"256x256",  class: "card-img-top"%>
-          <div class="card-body text-info">
-            <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
-            <p class="card-text"><%= interest.read_attribute(:description) %></p>
-            <%= link_to "Learn more", interest_path(interest), class: "btn btn-info" %>
+  <div class="row">
+    <div class="col about">
+      <h1>MirrorTravis</h1>
+      <p>Hello, my name is Travis Stephens. I am a senior ruby on rails developer commited to making a fantastic product and supporting my clients in everything they do. I have been
+        a professional rails developer for over three years and I take a lot of pride in my work and what I do. In addition to rails, I have a plethora of experience in creating end products
+        for users and doing so in a resourceful manner. I believe that I'm capable of fulfilling all your business needs and more.
+        If you have any questions regarding availability feel free to contact me at any time. You may use the form on this page under contact to leave a message in the comment box or
+        feel free to private message me via email at tstephens010@gmail.com
+        Here you will find a small display of my abilities and hopefully this example will provide you with insight as to what I can bring to you professionaly. This site was created 
+        by and designed by me. All images are copywritten under standard creative commons licensing.</p>
+    </div>
+    <div class="card-group col">
+    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+      <% @interests.each do |interest| %>
+        <div>
+          <div id="slide<%=interest.id%>" class="col-sm card card-index bg-light mb-3">
+            <%= image_tag "#{interest.image_name}.jpg", size:"256x256",  class: "card-img-top"%>
+            <div class="card-body text-info">
+              <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
+              <p class="card-text"><%= interest.read_attribute(:description) %></p>
+              <%= link_to "Learn more", interest_path(interest), class: "btn btn-info" %>
+            </div>
           </div>
         </div>
-      </li>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-  </ul>
-    <%= paginate @interests %>
 </div>
 

@@ -1,4 +1,97 @@
 @import "bootstrap";
+@import "font-awesome";
+html, body {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.footer {
+  position:absolute;
+  bottom:0;
+}
+
+.card-group{
+  position: relative;
+}
+
+.card-img-top{
+  border-radius: 15px 50px;
+}
+
+.card{
+  border-radius: 15px 50px;
+  background-image: image-url('card.jpg');
+  box-shadow: 10px 5px rgb(4, 47, 104);
+}
+
+#slide1 {
+  position: absolute;
+  transform: rotate(-20deg);
+  right: -200%;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 1 s forwards;
+  animation-delay: 1s;
+}
+
+#slide2 {
+  position: absolute;
+  transform: rotate(-10deg);
+  right: -200%;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 3s;
+  animation: slide 1 s forwards;
+  animation-delay: 1.5s;
+}
+
+#slide3 {
+  position: absolute;
+  transform: rotate(-5deg);
+  right: -200%;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 5s;
+  animation: slide 1 s forwards;
+  animation-delay: 2s;
+}
+
+#slide4 {
+  position: absolute;
+  transform: rotate(5deg);
+  right: -200%;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 5s;
+  animation: slide 1 s forwards;
+  animation-delay: 2.5s;
+}
+
+#slide5 {
+  position: absolute;
+  transform: rotate(10deg);
+  right: -200%;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 5s;
+  animation: slide 1 s forwards;
+  animation-delay: 3s;
+}
+
+#slide6 {
+  position: absolute;
+  transform: rotate(20deg);
+  right: -200%;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 5s;
+  animation: slide 1 s forwards;
+  animation-delay: 3.5s;
+}
+
+@-webkit-keyframes slide {
+  100% { right: 5px;
+     }
+}
+
+@keyframes slide {
+  100% { right: 5px; }
+}
 
 h1{
   font-family: "Times New Roman", Times, serif;
@@ -25,7 +118,7 @@ p{
 }
 
 .jumbotron{
-  background-image: image-url('jumbotron.jpg');
+  background-image: image-url('jumbotron.eps');
   height: 40vh;
 }
 
@@ -139,5 +232,12 @@ ul#menu li{
   max-height: 920px;
 }
 
-
-
+.about {
+  border-radius: 50px 50px;
+  box-shadow: 5px 8px 5px grey;;
+  background-color: rgb(4, 47, 104);
+  margin: 30px;
+  text-shadow: 3px 1px 2px grey;
+  color: lavender;
+  padding: 50px;
+}
