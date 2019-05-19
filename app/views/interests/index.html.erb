@@ -1,29 +1,44 @@
-
-
-
-
-<div class="container">
+<div class="container container-main">
   <div class="row">
     <div class="col about">
       <h1>MirrorTravis</h1>
       <p>Hello, my name is Travis Stephens. I am a senior ruby on rails developer commited to making a fantastic product and supporting my clients in everything they do. I have been
         a professional rails developer for over three years and I take a lot of pride in my work and what I do. In addition to rails, I have a plethora of experience in creating end products
-        for users and doing so in a resourceful manner. I believe that I'm capable of fulfilling all your business needs and more.
+        for users and doing so in a resourceful manner. I believe that I am capable of fulfilling all your business needs and more.
         If you have any questions regarding availability feel free to contact me at any time. You may use the form on this page under contact to leave a message in the comment box or
         feel free to private message me via email at tstephens010@gmail.com
         Here you will find a small display of my abilities and hopefully this example will provide you with insight as to what I can bring to you professionaly. This site was created 
-        by and designed by me. All images are copywritten under standard creative commons licensing.</p>
+        by and designed by me. All images are copywritten under standard royalty free licensing and belong to their respective owners.</p>
     </div>
     <div class="card-group col">
-    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
       <% @interests.each do |interest| %>
         <div>
-          <div id="slide<%=interest.id%>" class="col-sm card card-index bg-light mb-3">
+          <div id="slide<%=interest.id%>" class="col-sm card card-index bg-light mb-3 slide<%=interest.id%>">
             <%= image_tag "#{interest.image_name}.jpg", size:"256x256",  class: "card-img-top"%>
             <div class="card-body text-info">
               <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
               <p class="card-text"><%= interest.read_attribute(:description) %></p>
-              <%= link_to "Learn more", interest_path(interest), class: "btn btn-info" %>
+              <%= link_to "<<", "#", class: "btn btn-info", id: "backward#{interest.id}" %>
+              <%= link_to "Learn more", "#", class: "btn btn-info", "data-toggle" => "modal", "data-target" => "#cardModal#{interest.id}" %>
+              <a class="btn btn-info" id="forward<%=interest.id%>" onclick="$('#forward<%=interest.id%>').click()">Next</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="cardModal<%=interest.id%>" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="cardModalLabel"><%=interest.name.capitalize%></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <%=interest.long_description%>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
             </div>
           </div>
         </div>

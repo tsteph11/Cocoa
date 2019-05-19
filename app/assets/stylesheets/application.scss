@@ -1,5 +1,19 @@
 @import "bootstrap";
 @import "font-awesome";
+
+//nav menu
+.navcustom{
+  position: absolute;
+  left: 0;
+  border-radius: 5px 15px;
+  width: 5%;
+  background-image: image-url('card.jpg');
+}
+
+.container-main{
+  margin-top: 100px
+}
+
 html, body {
   max-width: 100%;
   overflow: hidden;
@@ -15,82 +29,135 @@ html, body {
 }
 
 .card-img-top{
-  border-radius: 15px 50px;
+  pointer-events: none;
+  border-radius: 15px 50px 10px 10px;
 }
 
 .card{
   border-radius: 15px 50px;
+  border-color: black;
   background-image: image-url('card.jpg');
-  box-shadow: 10px 5px rgb(4, 47, 104);
+  box-shadow: 1px 2px black;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
 
-#slide1 {
+.card:hover {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+//all the initial slide in animations
+.slide1 {
   position: absolute;
   transform: rotate(-20deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 2s;
-  animation: slide 1 s forwards;
+  animation: slide 1s forwards;
   animation-delay: 1s;
 }
 
-#slide2 {
+.slide2 {
   position: absolute;
   transform: rotate(-10deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 3s;
-  animation: slide 1 s forwards;
+  animation: slide 1s forwards;
   animation-delay: 1.5s;
 }
 
-#slide3 {
+.slide3 {
   position: absolute;
   transform: rotate(-5deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 5s;
-  animation: slide 1 s forwards;
+  animation: slide 1s forwards;
   animation-delay: 2s;
 }
 
-#slide4 {
+.slide4 {
   position: absolute;
   transform: rotate(5deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 5s;
-  animation: slide 1 s forwards;
+  animation: slide 1s forwards;
   animation-delay: 2.5s;
 }
 
-#slide5 {
+.slide5 {
   position: absolute;
   transform: rotate(10deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 5s;
-  animation: slide 1 s forwards;
+  animation: slide 1s forwards;
   animation-delay: 3s;
 }
 
-#slide6 {
+.slide6 {
   position: absolute;
   transform: rotate(20deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 5s;
-  animation: slide 1 s forwards;
+  animation: slide 1s forwards;
   animation-delay: 3.5s;
 }
 
 @-webkit-keyframes slide {
-  100% { right: 5px;
-     }
+  100% { right: 0; }
 }
 
 @keyframes slide {
-  100% { right: 5px; }
+  100% { right: 0; }
+}
+
+//shifting out animation
+.shift-slide {
+  position: absolute;
+  right: 0;
+  -webkit-animation: shift-slide 1s forwards, rotate-up 1s forwards;
+  animation: shift-slide 1s forwards, rotate-up 1s forwards;
+}
+
+//shifting back animation
+.shift-back {
+  position: absolute;
+  right: -100%;
+  -webkit-animation: slide 1s forwards;
+  animation: slide 1s forwards;
+}
+
+@-webkit-keyframes shift-slide {
+  100% { 
+    right: -100%;
+    
+   }
+}
+
+@-webkit-keyframes rotate-up {
+  100% { -webkit-transform: rotate(0deg); }
+}
+
+@keyframes shift-slide {
+  100% { right: -100%; }
+}
+
+@keyframes rotate-up {
+  100% { transform: rotate(0deg); }
+}
+
+
+.footer{
+  position: fixed;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  left: 0;
 }
 
 h1{
@@ -151,20 +218,6 @@ body{
   background-size: cover;
 }
 
-.hams {
-  animation-iteration-count: 100;
-  background-ccolor: lightgrey;
-  animation-name: blue-shift;
-  animation-duration: 8s;
-  display: block;
-  width: 33px;
-  height: 4px;
-  //padding: 5px;
-  margin-bottom: 5px;
-  position: relative;
-  background: black;
-  border-radius: 3px;
-}
 
 .card-index {
   border-color: white;
@@ -176,44 +229,6 @@ body{
   width: 18rem;
 }
 
-ul#menu li{
-  display: inline-block;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: lavender;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: lavenderblush}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
 
 /* paragraph body for interest show page */
 .interest-body {
@@ -233,11 +248,17 @@ ul#menu li{
 }
 
 .about {
+  right: -200%;
   border-radius: 50px 50px;
-  box-shadow: 5px 8px 5px grey;;
-  background-color: rgb(4, 47, 104);
+  box-shadow: 3px 2px 5px black;;
+  background-image: image-url('card.jpg');
   margin: 30px;
   text-shadow: 3px 1px 2px grey;
   color: lavender;
   padding: 50px;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 5s;
+  animation: slide 1 s forwards;
+  animation-delay: 4s;
 }
+
