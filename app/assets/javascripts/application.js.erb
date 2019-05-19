@@ -2,19 +2,29 @@
 //= require popper
 //= require bootstrap-sprockets
 
-$(function(event){
-    
-    var interest = 6;
-    $('#forward' + interest).on('click', function (event) {
-        $('#slide' + interest).removeClass("shift-back");
-        $('#slide' + interest).addClass("shift-slide");
-        interest = interest - 1;
-        if(interest == -1){
-            for(interest = 6; interest > -1; interest--){
-                $('#slide' + interest).removeClass("shift-slide");
-                $('#slide' + interest).addClass("shift-back");
-            }
-            interest = 6;
+
+var interest = 6;
+
+
+function addSlideToCard(){
+    $('body').off('click').on('click','#forward' + interest, function (event) {
+        if(interest>1){
+            console.log(interest);
+            $('#slide' + interest).addClass("shift-slide");
+            $('#slide' + interest).removeClass("shift-back");
+            interest--;
         }
     });
-});
+}
+
+
+function resetCard(){
+    $('body').off('click').on('click','#backward' + interest, function (event) {
+        if(interest<6){
+            interest++;
+            console.log(interest);
+            $('#slide' + interest).addClass("shift-back");
+            $('#slide' + interest).removeClass("shift-slide");
+        }
+    });
+}
