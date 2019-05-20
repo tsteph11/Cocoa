@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col about">
       <h1>MirrorTravis</h1>
-      <div class="text-container">
+      <div>
         <p>Hello, my name is Travis Stephens. I am a senior ruby on rails developer commited to making a fantastic product and supporting my clients in everything they do. I have been
         a professional rails developer for over three years and I take a lot of pride in my work and what I do. In addition to rails, I have a plethora of experience in creating end products
         for users and doing so in a resourceful manner. I believe that I am capable of fulfilling all your business needs and more.
@@ -20,9 +20,9 @@
             <div class="card-body text-info">
               <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
               <p class="card-text"><%= interest.read_attribute(:description) %></p>
-              <%= link_to "<<", "#", class: "btn btn-info", id: "backward#{interest.id}", onclick: "resetCard();" %>
-              <%= link_to "Learn more", "#", class: "btn btn-info", "data-toggle" => "modal", "data-target" => "#cardModal#{interest.id}" %>
-              <%= link_to ">>", "#", class: "btn btn-info", id: "forward#{interest.id}", onclick: "addSlideToCard();" %>
+              <%= link_to "Back", "#", class: "btn btn-info", id: "backward#{interest.id}", onclick: "resetCard();" %>
+              <%= link_to "Display", "#", class: "btn btn-info", "data-toggle" => "modal", "data-target" => "#cardModal#{interest.id}" %>
+              <%= link_to "Next", "#", class: "btn btn-info", id: "forward#{interest.id}", onclick: "addSlideToCard();" %>
             </div>
           </div>
         </div>
@@ -30,8 +30,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="cardModalLabel"><%=interest.name.capitalize%></h5>
-                <button type="button" class="btn btn-info" data-dismiss="modal" aria-label="Close">
+                <h1 class="modal-title" id="cardModalLabel"><%=interest.name.capitalize%></h1>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -39,7 +38,7 @@
                 <%=interest.long_description%>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>

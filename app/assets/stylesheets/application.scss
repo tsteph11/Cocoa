@@ -4,8 +4,10 @@
 //nav menu
 .navcustom{
   position: absolute;
-  left: 0;
-  border-radius: 5px 15px;
+  left: 5%;
+  top: 5%;
+  box-shadow: 3px 2px 5px black;
+  border-radius: 5px 5px;
   width: 5%;
   background-image: image-url('card.jpg');
 }
@@ -33,11 +35,19 @@ html, body {
   border-radius: 15px 50px 10px 10px;
 }
 
+.modal-content{
+  border-radius: 10px 10px;
+  box-shadow: 3px 2px 5px black;
+  text-shadow: 3px 1px 2px grey;
+  color: lavender;
+  background-image: image-url('card.jpg');
+}
+
 .card{
   border-radius: 15px 50px;
   border-color: black;
   background-image: image-url('card.jpg');
-  box-shadow: 1px 2px black;
+  box-shadow: 3px 2px 5px black;
   -webkit-transition-duration: 0.8s;
   transition-duration: 0.8s;
 }
@@ -50,7 +60,7 @@ html, body {
 //all the initial slide in animations
 .slide1 {
   position: absolute;
-  transform: rotate(-20deg);
+  transform: rotate(-10deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 2s;
@@ -60,7 +70,6 @@ html, body {
 
 .slide2 {
   position: absolute;
-  transform: rotate(-10deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 3s;
@@ -70,7 +79,7 @@ html, body {
 
 .slide3 {
   position: absolute;
-  transform: rotate(-5deg);
+  transform: rotate(-10deg);
   right: -200%;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 5s;
@@ -251,9 +260,8 @@ body{
 .about {
   right: -200%;
   border-radius: 50px 50px;
-  box-shadow: 3px 2px 5px black;;
+  box-shadow: 3px 2px 5px black;
   background-image: image-url('card.jpg');
-  // filter: blur(8px);
   margin: 30px;
   text-shadow: 3px 1px 2px grey;
   color: lavender;
@@ -262,12 +270,4 @@ body{
   -webkit-animation-delay: 5s;
   animation: slide 1 s forwards;
   animation-delay: 4s;
-}
-
-.text-container {
-  filter: blur(8px);
-}
-
-.text-container > p {
-  filter: none;
 }
