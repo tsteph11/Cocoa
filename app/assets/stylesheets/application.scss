@@ -160,6 +160,19 @@ html, body {
   100% { transform: rotate(0deg); }
 }
 
+.flip-over {
+  margin: auto;
+  -webkit-animation: rotateY 1s infinte linear;
+  animation: rotateY 1s infinite linear;
+}
+
+@-webkit-keyframes rotateY {
+  to { -webkit-transform: rotateY(360deg); }
+}
+@keyframes rotateY {
+  to { transform: rotateY(360deg); }
+}
+
 
 .footer{
   position: fixed;
@@ -185,17 +198,6 @@ p{
   background-color: lavender;
   //does not work in older browsers but then again, who really cares?
   pointer-events: none;
-}
-
-/*grey and lavendar shift*/
-@keyframes blue-shift {
-  0%, 100% {background-color: white;}
-  50% {background-color: black;}
-}
-
-.jumbotron{
-  background-image: image-url('jumbotron.eps');
-  height: 40vh;
 }
 
 .apparent-text{

@@ -33,3 +33,9 @@ function resetCard(){
         }
     });
 }
+
+function flipOver(){
+    $('body').off('click').on('click', '#flip' + interest, function (event){
+        $('#slide' + interest).addClass("flip-over")
+    })
+}

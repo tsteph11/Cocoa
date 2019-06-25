@@ -21,6 +21,7 @@
               <h5 class="card-title"><%= interest.read_attribute(:name) %></h5>
               <p class="card-text"><%= interest.read_attribute(:description) %></p>
               <%= link_to "Back", "#", class: "btn btn-info", id: "backward#{interest.id}", onclick: "resetCard();" %>
+              <%= link_to "Flip", "#", class: "btn btn-info", id: "flip#{interest.id}", onclick: "flipOver();" %>
               <%= link_to "Display", "#", class: "btn btn-info", "data-toggle" => "modal", "data-target" => "#cardModal#{interest.id}" %>
               <%= link_to "Next", "#", class: "btn btn-info", id: "forward#{interest.id}", onclick: "addSlideToCard();" %>
             </div>
